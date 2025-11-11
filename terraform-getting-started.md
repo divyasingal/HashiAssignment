@@ -27,6 +27,8 @@ Create a directory named `terraform-demo` on your local machine.
 ```console
 $ mkdir terraform-demo
 ```
+
+![](https://github.com/turbonomic/training/blob/main/images/ZN205InstanaOperator.png)
 Navigate to this directory.
 ```shell
 $ cd terraform-demo
