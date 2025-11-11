@@ -67,7 +67,7 @@ resource "docker_image" "nginx" {
   name = "nginx:latest"
 }
 ```
-<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/configuration.png)</kbd>
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/configuration1.png)</kbd>
 
 ## Initialize the Terraform directory
 
@@ -89,6 +89,8 @@ $ terraform apply
 ```
 <kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/apply.png)</kbd>
 
+Confirm that the Docker container is deployed.
+
 <kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/created.png)</kbd>
 
 ## Destroy the infrastructure
@@ -97,6 +99,10 @@ Once you no longer need the infrastructure, you may destroy it to reduce the res
 ```shell
 $ terraform destroy
 ```
-<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroy-confirmation.png)</kbd>
-<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroyed.png)</kbd>
 Look for a message at the bottom of the output asking for confirmation. When prompted, answer `yes` to allow Terraform to destroy the infrastructure it had created earlier. 
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroy-confirmation.png)</kbd>
+
+Confirm that the infrastructure is destroyed.
+
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroyed.png)</kbd>
+
