@@ -106,3 +106,5 @@ Confirm that the infrastructure is destroyed.
 
 <kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroyed.png)</kbd>
 
+## Next Steps
+Now that you have learned how to deploy infrastructure using Terraform, continue to learn more about [Terraform providers](https://developer.hashicorp.com/terraform/language/providers).
