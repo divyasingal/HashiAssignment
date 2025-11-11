@@ -32,13 +32,15 @@ $ mkdir terraform-demo
 Navigate to this directory.
 ```shell
 $ cd terraform-demo
-<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/changedirectory.png)</kbd>
 ```
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/changedirectory.png)</kbd>
+
 Next, create a file named `main.tf` inside this directory. This file will hold the Terraform configuration code for your Docker container. 
 
 ```shell
 $ touch main.tf
 ```
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/touch.png)</kbd>
 
 Open `main.tf` in your text editor, paste the following lines in this file.
 
@@ -51,20 +53,22 @@ terraform {
   }
 }
 provider "docker" {
-    host = "unix:///var/run/docker.sock"
+    host = "unix:////Users/divyasingal/.rd/docker.sock"
 }
 resource "docker_container" "nginx" {
-  image = docker_image.nginx.latest
+  image = docker_image.nginx.image_id
   name  = "training"
   ports {
     internal = 80
-    external = 80
+    external = 8000
   }
 }
 resource "docker_image" "nginx" {
   name = "nginx:latest"
 }
 ```
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/configuration.png)</kbd>
+
 ## Initialize the Terraform directory
 
 Initialize the Terraform configuration directory using the `init` command.  This downloads and installs the providers defined in the configuration, which in this case is the Docker provider.
@@ -72,6 +76,7 @@ Initialize the Terraform configuration directory using the `init` command.  This
 ```shell
 $ terraform init
 ```
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/initialization.png)</kbd>
 
 Check for any errors in the above initialization command.
 
@@ -82,6 +87,9 @@ If the `terraform init` command ran successfully, provision the infrastructure u
 ```shell
 $ terraform apply
 ```
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/apply.png)</kbd>
+
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/created.png)</kbd>
 
 ## Destroy the infrastructure
 Once you no longer need the infrastructure, you may destroy it to reduce the resources used. In this tutorial, you will destroy the Docker container that you created in the previous step.
@@ -89,5 +97,6 @@ Once you no longer need the infrastructure, you may destroy it to reduce the res
 ```shell
 $ terraform destroy
 ```
-
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroy-confirmation.png)</kbd>
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/destroyed.png)</kbd>
 Look for a message at the bottom of the output asking for confirmation. When prompted, answer `yes` to allow Terraform to destroy the infrastructure it had created earlier. 
