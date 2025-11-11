@@ -3,9 +3,20 @@
 Terraform is the most popular language for defining and provisioning infrastructure as code (IaC).
 You can follow this step-by-step guide to learn the Terraform basics. In this tutorial, you will learn how to install Terraform and use it to build, change, and destroy infrastructure as code (IaC). 
 
+## Prerequisites
+If you are using macOS, install the Homebrew package manager by following the instructions listed here: [Homebrew](https://brew.sh/)
+
 ## Install Terraform
 
 To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine, or environment on which you like to run code and do development.
+For example, if you are using macOS, run the following commands to install Terraform.
+```shell
+$ brew tap hashicorp/tap
+$ brew install hashicorp/tap/terraform
+```
+<kbd><img width="886" height="413" alt="Screenshot 2025-11-11 at 12 42 09 AM" src="https://github.com/user-attachments/assets/3b8ee05e-21c5-4443-beae-6dab80283514" /></kbd>
+
+
 
 ## Build infrastructure
 
@@ -13,7 +24,7 @@ In this tutorial, you will use Terraform to build infrastructure, more specifica
 
 Create a directory named `terraform-demo` on your local machine.
 
-```shell
+```console
 $ mkdir terraform-demo
 ```
 Navigate to this directory.
