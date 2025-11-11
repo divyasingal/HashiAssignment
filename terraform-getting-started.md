@@ -1,25 +1,32 @@
 # Getting Started with Terraform
 
-Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC).
+Terraform is the most popular language for defining and provisioning infrastructure as code (IaC).
+You can follow this step-by-step guide to learn the Terraform basics. In this tutorial, you will learn how to install Terraform and use it to build, change, and destroy infrastructure as code (IaC). 
 
-To install Terraform, simply visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine or environment on which you like to run code and do development.
+## Install Terraform
 
-With Terraform installed, let's dive right into it and start creating some infrastructure.
+To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine, or environment on which you like to run code and do development.
 
-Most guys find it easiest to create a new directory on there local machine and create Terraform configuration code inside it.
+## Build infrastructure
+
+In this tutorial, you will use Terraform to build infrastructure, more specifically, deploy a Docker container. 
+
+Create a directory named `terraform-demo` on your local machine.
 
 ```shell
 $ mkdir terraform-demo
+```
+Navigate to this directory.
+```shell
 $ cd terraform-demo
 ```
-
-Next, create a file for your Terraform configuration code.
+Next, create a file named `main.tf` inside this directory. This file will hold the Terraform configuration code for your Docker container. 
 
 ```shell
 $ touch main.tf
 ```
 
-Paste the following lines into the file.
+Open `main.tf` in your text editor, paste the following lines in this file.
 
 ```hcl
 terraform {
@@ -44,25 +51,29 @@ resource "docker_image" "nginx" {
   name = "nginx:latest"
 }
 ```
+## Initialize the Terraform directory
 
-Initialize Terraform with the `init` command. The AWS provider will be installed. 
+Initialize the Terraform configuration directory using the `init` command.  This downloads and installs the providers defined in the configuration, which in this case is the Docker provider.
 
 ```shell
 $ terraform init
 ```
 
-You shoud check for any errors. If it ran successfully, provision the resource with the `apply` command.
+Check for any errors in the above initialization command.
+
+## Create the infrastructure
+
+If the `terraform init` command ran successfully, provision the infrastructure using the `terraform apply` command. The command below may take a few minutes to run and will display a message indicating when the infrastructure has been created.
 
 ```shell
 $ terraform apply
 ```
 
-The command will take up to a few minutes to run and will display a message indicating that the resource was created.
-
-Finally, destroy the infrastructure.
+## Destroy the infrastructure
+Once you no longer need the infrastructure, you may destroy it to reduce the resources used. In this tutorial, you will destroy the Docker container that you created in the previous step.
 
 ```shell
 $ terraform destroy
 ```
 
-Look for a message are the bottom of the output asking for confirmation. Type `yes` and hit ENTER. Terraform will destroy the resources it had created earlier.
+Look for a message at the bottom of the output asking for confirmation. When prompted, answer `yes` to allow Terraform to destroy the infrastructure it had created earlier. 
