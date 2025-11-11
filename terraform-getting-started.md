@@ -4,7 +4,8 @@ Terraform is the most popular language for defining and provisioning infrastruct
 You can follow this step-by-step guide to learn the Terraform basics. In this tutorial, you will learn how to install Terraform and use it to build, change, and destroy infrastructure as code (IaC). 
 
 ## Prerequisites
-If you are using macOS, install the Homebrew package manager by following the instructions listed here: [Homebrew](https://brew.sh/)
+* If you are using macOS, install the Homebrew package manager by following the instructions listed here: [Homebrew](https://brew.sh/)
+* If you do not have Docker, install the Rancher Desktop by following the instructions listed here: [Rancher Desktop](https://rancherdesktop.io/)
 
 ## Install Terraform
 
@@ -31,6 +32,7 @@ $ mkdir terraform-demo
 Navigate to this directory.
 ```shell
 $ cd terraform-demo
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/changedirectory.png)</kbd>
 ```
 Next, create a file named `main.tf` inside this directory. This file will hold the Terraform configuration code for your Docker container. 
 
