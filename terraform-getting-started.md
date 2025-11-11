@@ -14,8 +14,7 @@ For example, if you are using macOS, run the following commands to install Terra
 $ brew tap hashicorp/tap
 $ brew install hashicorp/tap/terraform
 ```
-<kbd><img width="886" height="413" alt="Screenshot 2025-11-11 at 12 42 09 AM" src="https://github.com/user-attachments/assets/3b8ee05e-21c5-4443-beae-6dab80283514" /></kbd>
-
+<kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/Install1.png)</kbd>
 
 
 ## Build infrastructure
