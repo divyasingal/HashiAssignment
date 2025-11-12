@@ -18,7 +18,7 @@ $ brew install hashicorp/tap/terraform
 <kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/Install1.png)</kbd>
 
 
-## Build infrastructure
+## Provision infrastructure
 
 In this tutorial, you will use Terraform to build infrastructure, more specifically, deploy a Docker container. 
 
@@ -80,7 +80,7 @@ $ terraform init
 
 Check for any errors in the above initialization command.
 
-## Create the infrastructure
+## Deploy infrastructure
 
 If the `terraform init` command ran successfully, provision the infrastructure using the `terraform apply` command. The command below may take a few minutes to run and will display a message indicating when the infrastructure has been created.
 
@@ -93,7 +93,7 @@ Confirm that the Docker container is deployed.
 
 <kbd>![](https://github.com/divyasingal/HashiAssignment/blob/ContentImprovements/images/created.png)</kbd>
 
-## Destroy the infrastructure
+## Destroy infrastructure
 Once you no longer need the infrastructure, you may destroy it to reduce the resources used. In this tutorial, you will destroy the Docker container that you created in the previous step.
 
 ```shell
