@@ -1,7 +1,7 @@
 # Getting Started with Terraform
 
 Terraform, developed by HashiCorp, is a widely adopted open-source Infrastructure as Code (IaC) tool. It enables users to define, provision, and manage cloud and on-premises infrastructure resources using a declarative configuration language.
-Follow this step-by-step guide to learn about the Terraform basics. In this tutorial, you will learn how to install Terraform and use it to provision and destroy infrastructure. 
+Follow this step-by-step guide to learn the basics of Terraform. In this tutorial, you will learn how to install Terraform and use it to provision and destroy infrastructure. 
 
 ## Prerequisites
 * If you are using macOS, install the Homebrew package manager by following the instructions listed here: [Homebrew](https://brew.sh/)
